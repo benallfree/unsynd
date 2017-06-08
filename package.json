@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "upstream-pull": "git subtree pull --prefix themes/starterbootstrap-clean-blog git@github.com:humboldtux/startbootstrap-clean-blog.git master --squash"
+    "upstream-pull": "git subtree pull --prefix themes/startbootstrap-clean-blog git@github.com:humboldtux/startbootstrap-clean-blog.git master --squash"
   },
   "repository": {
     "type": "git",
