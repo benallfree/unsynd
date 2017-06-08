@@ -1,0 +1,21 @@
+{
+  "name": "unsynd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "upstream-pull": "git subtree pull --prefix themes/starterbootstrap-clean-blog git@github.com:humboldtux/startbootstrap-clean-blog.git master --squash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benallfree/unsynd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benallfree/unsynd/issues"
+  },
+  "homepage": "https://github.com/benallfree/unsynd#readme"
+}
