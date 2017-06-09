@@ -9,5 +9,55 @@
 
 .site-heading
 {
+  h1
+  {
+  }
+  h2
+  {
+    font-size: 18pt;
+  }
+}
+.intro-header
+{
   margin-top: 60px;
+  text-align: center;
+  img
+  {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid gray;
+  }
+  audio
+  {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+.container
+{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  &.one
+  {
+    color: black;
+    h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+    {
+      color: black;
+    }
+    h6
+    {
+      text-align: center;
+      &.text-muted
+      {
+        color: #888888;
+      }
+    }
+    background-color: white;
+  }
+}
+
+.brand-orange
+{
+  color: #ff9827;
 }

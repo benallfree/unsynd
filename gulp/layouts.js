@@ -10,12 +10,27 @@ import rename from 'gulp-rename';
 import gutil from 'gulp-util';
 var 
   hash         = require("gulp-hash"),
-  del          = require("del")
+  del          = require("del"),
+  pug          = require('gulp-pug')
+ 
 
 
 // compile SASS with sourcemaps
-gulp.task('layouts', () => {
+gulp.task('layouts-pug', () => {
   
-    gulp.src(['./src/layouts/**/*'])
+    gulp.src(['./src/layouts/**/*.pug'])
+      .pipe(pug())
       .pipe(gulp.dest("./hugo/layouts"))
+
+
 });
+
+gulp.task('layouts-html', () => {
+  
+    gulp.src(['./src/layouts/**/*.html'])
+      .pipe(gulp.dest("./hugo/layouts"))
+
+
+});
+
+gulp.task('layouts', ['layouts-pug', 'layouts-html']);

@@ -1,0 +1,32 @@
+.navbar-brand img {
+  height: 28px; }
+
+.site-heading h2 {
+  font-size: 18pt; }
+
+.intro-header {
+  margin-top: 60px;
+  text-align: center; }
+  .intro-header img {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid gray; }
+  .intro-header audio {
+    margin-top: 20px;
+    width: 100%; }
+
+.container {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .container.one {
+    color: black;
+    background-color: white; }
+    .container.one h1, .container.one h2, .container.one h3, .container.one h4, .container.one h5, .container.one h6, .container.one .h1, .container.one .h3, .container.one .h4, .container.one .h5, .container.one .h6 {
+      color: black; }
+    .container.one h6 {
+      text-align: center; }
+      .container.one h6.text-muted {
+        color: #888888; }
+
+.brand-orange {
+  color: #ff9827; }

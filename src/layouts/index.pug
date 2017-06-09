@@ -1,0 +1,25 @@
+| {{ partial "header.html" .}}
+
+header.intro-header
+  .container
+    .site-heading
+      h1
+        | We are the 
+        span.brand-orange unsynd
+        | .
+      h2.text-muted Those artists, musicians, and industry professionals who are not waiting for a record deal to do it for us.
+.container.one
+  h1
+    | Jimi Revolver
+  h6.text-muted
+    | Podcast for Friday, June 9th 
+  div.row
+    div.col-xs-4
+      img(src='/img/sized/cropped/100/artists/jimi-revolver/main.jpg')
+    div.col-xs-8
+      audio(controls)
+        source(src='horse.mp3' type='audio/mpeg')
+  p
+    | Jimi Revolver checks in from his East Coast tour to give us an exclusive performance and chat about how to get up in every morning and try again. He gives tips on vocal health, how to book gigs, as well as an exclusive performance.
+
+| {{ partial "footer.html" .}}
