@@ -7,7 +7,7 @@ languageCode = "en-us"
 copyright = "Copyright 2017, Unsynd.com"
 googleAnalytics = "UA-123-45" # delete or comment to disable Google Analytics JS generation
 disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus comments
-publishDir = "../build"
+publishDir = "../docs"
 
 [author]
   name = "Benoît Benedetti"

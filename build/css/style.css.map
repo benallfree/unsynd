@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA;EAII,aAAY,EACb","file":"style.css","sourcesContent":[".navbar-brand\n{\n  img \n  {\n    height: 27px;\n  }  \n} \n"]}
