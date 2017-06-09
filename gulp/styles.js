@@ -15,6 +15,7 @@ var
 
 // compile SASS with sourcemaps
 gulp.task('sass', () => {
+  del([`${global.paths.dist_css}/**/*`])
     gulp.src(global.paths.sass)
         .pipe(sass()).on('error', function(error) {
             gutil.log(error.toString());

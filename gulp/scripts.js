@@ -25,6 +25,7 @@ const b = browserify({
 
 // babelify JavaScript files
 gulp.task('scripts', () => {
+  del([`${global.paths.dist_js}/**/*`])
     return b.bundle().on('error', function(error) {
             gutil.log(error.toString());
             this.emit('end');
