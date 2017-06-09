@@ -8,17 +8,21 @@ import sourcemaps from 'gulp-sourcemaps';
 import cssNano from 'gulp-cssnano';
 import rename from 'gulp-rename';
 import gutil from 'gulp-util';
-import livereload from 'gulp-livereload';
+var 
+  hash         = require("gulp-hash"),
+  del          = require("del")
+
 
 // compile SASS with sourcemaps
 gulp.task('sass', () => {
     gulp.src(global.paths.sass)
-        .pipe(sourcemaps.init())
         .pipe(sass()).on('error', function(error) {
             gutil.log(error.toString());
             this.emit('end');
         })
         .pipe(autoprefixer())
-        .pipe(sourcemaps.write('./'))
+        .pipe(hash())
         .pipe(gulp.dest(global.paths.dist_css))
+        .pipe(hash.manifest("./hugo/data/cachebust.json"))
+        .pipe(gulp.dest("./"))
 });

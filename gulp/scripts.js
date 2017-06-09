@@ -11,6 +11,10 @@ import buffer from 'vinyl-buffer';
 import sourcemaps from 'gulp-sourcemaps';
 import gutil from 'gulp-util';
 
+var 
+  hash         = require("gulp-hash"),
+  del          = require("del")
+
 const b = browserify({
     entries: `${global.paths.src}/js/main.js`,
     debug: true,
@@ -27,8 +31,10 @@ gulp.task('scripts', () => {
         })
         .pipe(source(`${global.paths.src}/js/main.js`))
         .pipe(buffer())
-        .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(global.paths.dist_js));
+        .pipe(hash())
+        .pipe(gulp.dest(global.paths.dist_js))
+        .pipe(hash.manifest("./hugo/data/cachebust.json"))
+        .pipe(gulp.dest("./"))
+        
 });

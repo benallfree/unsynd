@@ -7,11 +7,7 @@ languageCode = "en-us"
 copyright = "Code released under the Apache 2.0 license."
 googleAnalytics = "UA-123-45" # delete or comment to disable Google Analytics JS generation
 disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus comments
-publishDir = "hugo-build"
-archetypeDir = "hugo-src/archetypes"
-contentDir = "hugo-src/content"
-staticDir = "hugo-src/static"
-layoutDir = "hugo-src/layouts"
+publishDir = "../build"
 
 [author]
   name = "Benoît Benedetti"

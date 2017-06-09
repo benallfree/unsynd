@@ -10,6 +10,8 @@ import imageResize from 'gulp-image-resize';
 import runSeq from 'run-sequence';
 
 
+// For scaling: https://www.npmjs.com/package/gulp-image-resize
+
 let imageTasks=['minimize-images'];
 gulp.task('minimize-images', function() {
   let dest = global.paths.dest_img;
