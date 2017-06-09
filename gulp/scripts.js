@@ -12,7 +12,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import gutil from 'gulp-util';
 
 const b = browserify({
-    entries: `${global.paths.src}/static/js/main.js`,
+    entries: `${global.paths.src}/js/main.js`,
     debug: true,
     transform: [babelify.configure({
         presets: ['es2015']
@@ -25,10 +25,10 @@ gulp.task('scripts', () => {
             gutil.log(error.toString());
             this.emit('end');
         })
-        .pipe(source(`${global.paths.src}/static/js/main.js`))
+        .pipe(source(`${global.paths.src}/js/main.js`))
         .pipe(buffer())
         .pipe(sourcemaps.init())
-        .pipe(concat('unsynd.js'))
+        .pipe(concat('main.js'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(global.paths.dist_js));
 });

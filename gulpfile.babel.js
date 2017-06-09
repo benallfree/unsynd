@@ -4,24 +4,23 @@ import gulp from 'gulp';
 import requireDir from 'require-dir';
 
 global.paths = {
-    // HTML source files
-    'html': './src/*.html',
     // JS source files
-    'js': './src/static/js/**/*.js',
+    'js': './src/js/**/*.js',
     // SASS source files
-    'sass': './src/static/scss/**/*.scss',
+    'sass': './src/scss/**/*.scss',
     // image sources files
-    'img': './src/static/img/*',
+    'img': './src/img',
     // source folder
     'src': './src',
     // source CSS folder
     'css': './src/css',
     // distribution folder
-    'dist': './static',
+    'dist': './hugo/static',
   
-    'static': './static',
-    'dist_css': './static/css',
-    'dist_js': './static/js',
+    'static': './hugo/static',
+    'dist_css': './hugo/static/css',
+    'dist_js': './hugo/static/js',
+    'dest_img': './hugo/static/img',
 };
 
 requireDir('./gulp', { recurse: false });

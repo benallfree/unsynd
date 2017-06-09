@@ -1,1 +1,0 @@
-{"version":3,"sources":["unsynd.scss"],"names":[],"mappings":"AAAA;EAII,aAAY,EACb","file":"unsynd.css","sourcesContent":[".navbar-brand\n{\n  img \n  {\n    height: 27px;\n  }  \n} \n"]}
