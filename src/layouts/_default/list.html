@@ -1,4 +1,4 @@
-{{ partial "header.html" .}}
+{{ partial "header.html" . }}
 
     <!-- Page Header -->
     <header class="intro-header" style="background-image: url('{{ .Site.BaseURL }}img/home-bg.jpg')">
@@ -6,9 +6,9 @@
        <div class="row">
          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
            <div class="site-heading">
-             <h1>{{ .Site.Title }}</h1>
+             <h1>{{ .Title }}</h1>
              <hr class="small">
-             {{ with .Site.Params.Description }}<span class="subheading">{{ . }}</span>{{ end }}
+             <span class="subheading">{{ .Description }}</span>
            </div>
          </div>
        </div>
@@ -19,18 +19,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          {{ $posts := or .Site.Params.PostSummariesFrontPage 4 }}
-          {{ range first $posts (where .Data.Pages "Type" "post") }}
-              {{ .Render "summary"}}
+          {{ range .Paginator.Pages }}
+              {{ .Render "archive" }}
           {{ end }}
-          <!-- Pager -->
-          <ul class="pager">
-            <li class="next">
-              <a href="{{ .Site.BaseURL }}post/">Older Posts &rarr;</a>
-            </li>
-          </ul>
+          {{ template "_internal/pagination.html" . }}
         </div>
       </div>
     </div>
 
-{{ partial "footer.html" .}}
+{{ partial "footer.html" . }}

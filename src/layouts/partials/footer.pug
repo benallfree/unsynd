@@ -20,7 +20,10 @@ footer
           | {{ end }}
         p.copyright.text-muted
           | {{ .Site.Copyright }}
-script(src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js', integrity='sha256-+J5cSgDOPu6OT8mt+r5f7/cmvICoEmNdK2ZGz8ql8wc=', crossorigin='anonymous')
+script(src='//unpkg.com/vue@2.3.4/dist/vue.min.js')
+script(src='//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js')
+script(src='//unpkg.com/tether@latest/dist/js/tether.min.js')
+script(src='//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js')
 <script src="{{ .Site.BaseURL }}js/{{ index .Site.Data.cachebust "main.js" }}"></script>
 | {{ template "_internal/google_analytics.html" . }}
 </body>
