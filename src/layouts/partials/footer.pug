@@ -1,18 +1,17 @@
-hr
 footer
   .container
     .row
-      .col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+      .col.col-offset-2
         ul.list-inline.text-center
           | {{ with .Site.Params.email }}
-          li
+          li.list-inline-item
             a(href='mailto:{{ . }}')
               span.fa-stack.fa-lg
                 i.fa.fa-circle.fa-stack-2x
                 i.fa.fa-envelope-o.fa-stack-1x.fa-inverse
           | {{ end }}
           | {{ range .Site.Params.social }}
-          li
+          li.list-inline-item
             a(href='{{ .url }}')
               span.fa-stack.fa-lg
                 i.fa.fa-circle.fa-stack-2x
@@ -20,11 +19,7 @@ footer
           | {{ end }}
         p.copyright.text-muted
           | {{ .Site.Copyright }}
-script(src='//unpkg.com/vue@2.3.4/dist/vue.min.js')
-script(src='//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js')
-script(src='//unpkg.com/tether@latest/dist/js/tether.min.js')
-script(src='//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js')
-<script src="{{ .Site.BaseURL }}js/{{ index .Site.Data.cachebust "main.js" }}"></script>
+</div>
 | {{ template "_internal/google_analytics.html" . }}
 </body>
 </html>

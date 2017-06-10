@@ -1,25 +1,67 @@
 | {{ partial "header.html" .}}
 
-header.intro-header
-  .container
-    .site-heading
+
+.container.three
+  .row
+    .col.text-center
+      h3
+        | The Unsynd Podcast launches in 
+        s 50
+        span.text-warning  49 
+        | more articles.
+      button.btn.btn-xl.btn-primary
+        | Read Our Launch Plan
+
+.container.two.featured-podcast
+  .row.text-center
+    .col
+      h1.title
+        | Pilot Episode: Jimi Revolver
+      h2.subtitle.text-muted
+        | Podcast for Friday, June 9th 
+      small.text-muted
+        | Listen time: 23 mins
+  .row
+    .col.text-center
+      img(src='/img/sized/cropped/100/artists/jimi-revolver/main.jpg')
+    .col.text-center.align-self-center
+      a(style='font-size:80px').text-success
+        i.fa.fa-play-circle
+      h5.text-success
+        | Listen Now
+  .row
+    .col
+      p
+        | Jimi Revolver checks in from his East Coast tour to give us an exclusive performance and chat about how to get up in every morning and try again. He gives tips on vocal health, how to book gigs, as well as an exclusive performance.
+
+.container.four.featured-article
+  .row.text-center
+    .col
+      h1.title
+        | Surviving the Road
+      h2.subtitle.text-muted
+        | Artist Perspective for Friday, June 9th 
+      small.text-muted
+        | Read time: 23 mins
+  .media
+    .media-body
+      | It's not every day that you can get up and look out at the ocean and think, "I arrived". Today wasn't one of those days either.
+    img.d-flex.ml-1(src='/img/sized/cropped/100/artists/jimi-revolver/main.jpg')
+  .row
+    .col
+      .text-center
+        a.btn.btn-xl.btn-success
+          i.fa.fa-book
+          |  Read Article
+  
+
+.container.one.text-center
+  .row
+    .col
       h1
         | We are the 
         span.brand-orange unsynd
-        | .
-      h2.text-muted Those artists, musicians, and industry professionals who are not waiting for a record deal to do it for us.
-.container.one
-  h1
-    | Jimi Revolver
-  h6.text-muted
-    | Podcast for Friday, June 9th 
-  div.row
-    div.col-xs-4
-      img(src='/img/sized/cropped/100/artists/jimi-revolver/main.jpg')
-    div.col-xs-8
-      audio(controls)
-        source(src='horse.mp3' type='audio/mpeg')
-  p
-    | Jimi Revolver checks in from his East Coast tour to give us an exclusive performance and chat about how to get up in every morning and try again. He gives tips on vocal health, how to book gigs, as well as an exclusive performance.
+      h4.text-muted Those artists, musicians, and industry professionals who are not waiting for a record deal to do it for us.
+      p Unsynd features daily articles and podcasts from the front lines. Learn to stoke your own fire from independent artists, agents, and professionals.
 
 | {{ partial "footer.html" .}}

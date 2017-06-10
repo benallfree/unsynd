@@ -19,26 +19,19 @@
 }
 .intro-header
 {
-  margin-top: 60px;
   text-align: center;
-  img
-  {
-    width: 100%;
-    border-radius: 100px;
-    border: 1px solid gray;
-  }
-  audio
-  {
-    margin-top: 20px;
-    width: 100%;
-  }
 }
+
 
 .container
 {
   padding-top: 15px;
   padding-bottom: 15px;
   &.one
+  {
+    background-color: #dedcbd;
+  }
+  &.two
   {
     color: black;
     h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
@@ -55,10 +48,81 @@
     }
     background-color: white;
   }
+  &.three
+  {
+    background-color: #960000;
+  }
+  &.four
+  {
+    color: black;
+    h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+    {
+      color: black;
+    }
+    background-color: #f3ff5a;
+    a.readmore
+    {
+      background-color: #ecd140;
+      font-size: 25px;
+      .fa
+      {
+        font-size: 50px;
+      }
+      
+    }
+  }
 }
 
 .brand-orange
 {
   color: #ff9827;
+}
+
+.featured-podcast
+{
+  .title
+  {
+    font-size: 45px;
+  }
+  .subtitle
+  {
+    font-size: 15px;
+  }
+  audio
+  {
+    width: 100%;
+  }
+  
+  img
+  {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid gray;
+  }
+  
+}
+
+.featured-article
+{
+  .title
+  {
+    font-size: 45px;
+  }
+  .subtitle
+  {
+    font-size: 15px;
+  }
+  audio
+  {
+    width: 100%;
+  }
+  
+  img
+  {
+    width: 100px;
+    border-radius: 100px;
+    border: 1px solid gray;
+  }
+  
 }
 

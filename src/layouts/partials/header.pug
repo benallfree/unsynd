@@ -11,27 +11,26 @@ head
   link(href='{{ .RSSLink }}', rel='alternate', type='application/rss+xml', title='{{ .Site.Title }}')
   link(href='{{ .RSSLink }}', rel='feed', type='application/rss+xml', title='{{ .Site.Title }}')
   | {{ end }}
+
   link(type='text/css', rel='stylesheet', href='//unpkg.com/bootswatch@4.0.0-alpha.6/cyborg/bootstrap.min.css')
   link(type='text/css', rel='stylesheet', href='//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css')
   link(href='//unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
+  <link href="{{ .Site.BaseURL }}css/{{ index .Site.Data.cachebust "style.css" }}" rel="stylesheet"/>
+
   script(src='//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js')
   script(src='//unpkg.com/respond.js@1.4.2/dest/respond.min.js')
-  <link href="{{ .Site.BaseURL }}css/{{ index .Site.Data.cachebust "style.css" }}" rel="stylesheet"/>
+  script(src='//unpkg.com/vue@2.3.4/dist/vue.min.js')
+  script(src='//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js')
+  script(src='//unpkg.com/tether@latest/dist/js/tether.min.js')
+  script(src='//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js')
+  <script src="{{ .Site.BaseURL }}js/{{ index .Site.Data.cachebust "main.js" }}"></script>
+  
 <body>
-navbar(placement='top', type='default')
-  a.navbar-brand(slot='brand', href='/', title='Home')
-    img(src='/img/sized/aspect/100/logo/9_vectorized-inverted.png')
-  dropdown(text='Dropdown')
-    li
-      a(href='link') Option
-  // Or normal bootstrap style
-  li.dropdown
-    a.dropdown-toggle(href='#') Dropdown
-    ul.dropdown-menu
-      li
-        a(href='link') Option
-  // For right positioning use slot
-  li(slot='right')
-    a(href='https://github.com/yuche/vue-strap', target='_blank') Fork...
+<div id='app'>
+.container
+  .row
+    .col
+      a.navbar-brand(href='/')
+        img(src='/img/sized/aspect/100/logo/9_vectorized-inverted.png')
