@@ -35,7 +35,7 @@
         font-size: 50px; }
 
 .brand-orange {
-  color: #ff9827; }
+  color: #ff9827 !important; }
 
 .featured-podcast .title {
   font-size: 45px; }
@@ -51,6 +51,16 @@
   border-radius: 100px;
   border: 1px solid gray; }
 
+.featured-podcast .card {
+  color: white; }
+  .featured-podcast .card h1, .featured-podcast .card h2, .featured-podcast .card h3, .featured-podcast .card h4, .featured-podcast .card h5, .featured-podcast .card h6, .featured-podcast .card .h1, .featured-podcast .card .h3, .featured-podcast .card .h4, .featured-podcast .card .h5, .featured-podcast .card .h6 {
+    color: white; }
+  .featured-podcast .card .card-title img {
+    width: initial;
+    border: none;
+    border-radius: initial;
+    height: 80px; }
+
 .featured-article .title {
   font-size: 45px; }
 
@@ -64,3 +74,13 @@
   width: 100px;
   border-radius: 100px;
   border: 1px solid gray; }
+
+.featured-article .card {
+  color: white; }
+  .featured-article .card h1, .featured-article .card h2, .featured-article .card h3, .featured-article .card h4, .featured-article .card h5, .featured-article .card h6, .featured-article .card .h1, .featured-article .card .h3, .featured-article .card .h4, .featured-article .card .h5, .featured-article .card .h6 {
+    color: white; }
+  .featured-article .card .card-title img {
+    width: initial;
+    border: none;
+    border-radius: initial;
+    height: 80px; }

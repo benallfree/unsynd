@@ -75,7 +75,7 @@
 
 .brand-orange
 {
-  color: #ff9827;
+  color: #ff9827 !important;
 }
 
 .featured-podcast
@@ -100,6 +100,27 @@
     border: 1px solid gray;
   }
   
+  .card
+  {
+    color: white;
+    h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+    {
+      color: white;
+    }
+    .card-title
+    {
+      img
+      {
+        width: initial;
+        border: none;
+        border-radius: initial;
+        height: 80px;
+      }
+      
+    }
+  }
+  
+  
 }
 
 .featured-article
@@ -122,6 +143,26 @@
     width: 100px;
     border-radius: 100px;
     border: 1px solid gray;
+  }
+  
+  .card
+  {
+    color: white;
+    h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+    {
+      color: white;
+    }
+    .card-title
+    {
+      img
+      {
+        width: initial;
+        border: none;
+        border-radius: initial;
+        height: 80px;
+      }
+      
+    }
   }
   
 }
