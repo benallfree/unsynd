@@ -19,4 +19,5 @@ gulp.task('watch', ['lint_js', 'scripts', 'lint_sass', 'sass', 'images', 'layout
     gulp.watch(['src/img/**/*'], ['images']).on('change', logChanges);
     gulp.watch(['src/layouts/**/*'], ['layouts']).on('change', logChanges);
     gulp.watch(['src/archetypes/**/*'], ['archetypes']).on('change', logChanges);
+    gulp.watch(['src/content/**/*'], ['content']).on('change', logChanges);
 });
