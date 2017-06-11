@@ -47,7 +47,7 @@
   width: 100%; }
 
 .featured-podcast img {
-  width: 100%;
+  width: 150px;
   border-radius: 100px;
   border: 1px solid gray; }
 
@@ -84,3 +84,8 @@
     border: none;
     border-radius: initial;
     height: 80px; }
+
+.tight {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto; }
