@@ -13,7 +13,7 @@ function logChanges(event) {
 }
 
 // Watch for changes.
-gulp.task('watch', ['lint_js', 'scripts', 'lint_sass', 'sass', 'images', 'layouts', 'archetypes'], () => {
+gulp.task('watch', ['lint_js', 'scripts', 'lint_sass', 'sass', 'images', 'layouts', 'archetypes', 'content'], () => {
     gulp.watch(['src/js/**/*'], ['lint_js', 'scripts']).on('change', logChanges);
     gulp.watch(['src/scss/**/*'], ['lint_sass', 'sass']).on('change', logChanges);
     gulp.watch(['src/img/**/*'], ['images']).on('change', logChanges);

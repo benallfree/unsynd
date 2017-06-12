@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Unsynd</title>
+    <link>https://unsynd.com/</link>
+    <description>Recent content on Unsynd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright 2017, Unsynd.com</copyright>
+    <lastBuildDate>Sun, 11 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://unsynd.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Crushing the Blog</title>
+      <link>https://unsynd.com/crushing-the-blog/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unsynd.com/crushing-the-blog/</guid>
+      <description>How Jimi Did It Jimi Revolver has been featured on the Unsynd Podcast and the Unsynd Blog. On the podcast, he was interviewed and gave an exclusive performance. People are listening and downloading and going nuts. But before you heard Jimi on the podcast, he wrote an article for the Unsynd Blog.
+Writing an article for the Unsynd Blog opened the door. Jimi&amp;rsquo;s article works for him day and night, building his online reputation and collecting email addresses of venues, fans, and other artists.</description>
+    </item>
+    
+    <item>
+      <title>Unsynd Podcast</title>
+      <link>https://unsynd.com/launch/</link>
+      <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://unsynd.com/launch/</guid>
+      <description>The Unsynd Blog is coming to your earbuds!
+Jimi Revolver kicks off our pilot episode so you know what it&amp;rsquo;s going to sound like.
+ Listen Now  The Unsynd Podcast features interviews and performances by new and noteworthy artists and industry professionals who are making it happen without major record label support. I talk directly with successful people about what they are doing today to make it happen for themselves.</description>
+    </item>
+    
+  </channel>
+</rss>

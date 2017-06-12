@@ -1,32 +1,63 @@
+$brand-orange: #ff9827;
+
+strong
+{
+  font-weight: normal;
+  color: $brand-orange;
+}
+em
+{
+  color: darken($brand-orange, 20%);
+}
+hr
+{
+  border-top: 1px solid $brand-orange;
+  opacity: 0.5;
+}
+
+.content
+{
+  h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+  {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+}
+h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+{
+  color: $brand-orange;
+}
+
+ h4, h5, h6, .h4, .h5, .h6
+{
+  color: white;
+}
+
+h6, .h6
+{
+  color: darken($brand-orange, 30%);
+}
+
+body
+{
+  font-size: 1.075rem;
+}
+
 .navbar-brand
 {
   img 
   {
-    height: 28px;
+    height: 2rem;
   }  
 } 
 
 
-.site-heading
-{
-  h1
-  {
-  }
-  h2
-  {
-    font-size: 18pt;
-  }
-}
-.intro-header
-{
-  text-align: center;
-}
-
 
 .container
 {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   &.one
   {
     background-color: #dedcbd;
@@ -51,6 +82,10 @@
   &.three
   {
     background-color: #960000;
+    h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+    {
+      color: white;
+    }
   }
   &.four
   {
@@ -60,43 +95,29 @@
       color: black;
     }
     background-color: #f3ff5a;
-    a.readmore
-    {
-      background-color: #ecd140;
-      font-size: 25px;
-      .fa
-      {
-        font-size: 50px;
-      }
-      
-    }
   }
 }
 
 .brand-orange
 {
-  color: #ff9827 !important;
+  color: $brand-orange !important;
 }
 
 .featured-podcast
 {
   .title
   {
-    font-size: 45px;
+    font-size: 2.5rem;
   }
   .subtitle
   {
-    font-size: 15px;
-  }
-  audio
-  {
-    width: 100%;
+    font-size: 1rem;
   }
   
   img
   {
-    width: 150px;
-    border-radius: 100px;
+    width: 9rem;
+    border-radius: 100rem;
     border: 1px solid gray;
   }
   
@@ -114,7 +135,7 @@
         width: initial;
         border: none;
         border-radius: initial;
-        height: 80px;
+        height: 3.5rem;
       }
       
     }
@@ -123,15 +144,22 @@
   
 }
 
+
+img.round
+{
+  border-radius: 100rem;
+  border: 1px solid gray; 
+}
+
 .featured-article
 {
   .title
   {
-    font-size: 45px;
+    font-size: 2.5rem;
   }
   .subtitle
   {
-    font-size: 15px;
+    font-size: 1rem;
   }
   audio
   {
@@ -140,8 +168,8 @@
   
   img
   {
-    width: 100px;
-    border-radius: 100px;
+    width: 6.5rem;
+    border-radius: 100rem;
     border: 1px solid gray;
   }
   
@@ -159,7 +187,7 @@
         width: initial;
         border: none;
         border-radius: initial;
-        height: 80px;
+        height: 3.5rem;
       }
       
     }

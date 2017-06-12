@@ -1,15 +1,36 @@
+strong {
+  font-weight: normal;
+  color: #ff9827; }
+
+em {
+  color: #c06400; }
+
+hr {
+  border-top: 1px solid #ff9827;
+  opacity: 0.5; }
+
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .content .h1, .content .h3, .content .h4, .content .h5, .content .h6 {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6 {
+  color: #ff9827; }
+
+h4, h5, h6, .h4, .h5, .h6 {
+  color: white; }
+
+h6, .h6 {
+  color: #8d4a00; }
+
+body {
+  font-size: 1.075rem; }
+
 .navbar-brand img {
-  height: 28px; }
-
-.site-heading h2 {
-  font-size: 18pt; }
-
-.intro-header {
-  text-align: center; }
+  height: 2rem; }
 
 .container {
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
   .container.one {
     background-color: #dedcbd; }
   .container.two {
@@ -23,32 +44,26 @@
         color: #888888; }
   .container.three {
     background-color: #960000; }
+    .container.three h1, .container.three h2, .container.three h3, .container.three h4, .container.three h5, .container.three h6, .container.three .h1, .container.three .h3, .container.three .h4, .container.three .h5, .container.three .h6 {
+      color: white; }
   .container.four {
     color: black;
     background-color: #f3ff5a; }
     .container.four h1, .container.four h2, .container.four h3, .container.four h4, .container.four h5, .container.four h6, .container.four .h1, .container.four .h3, .container.four .h4, .container.four .h5, .container.four .h6 {
       color: black; }
-    .container.four a.readmore {
-      background-color: #ecd140;
-      font-size: 25px; }
-      .container.four a.readmore .fa {
-        font-size: 50px; }
 
 .brand-orange {
   color: #ff9827 !important; }
 
 .featured-podcast .title {
-  font-size: 45px; }
+  font-size: 2.5rem; }
 
 .featured-podcast .subtitle {
-  font-size: 15px; }
-
-.featured-podcast audio {
-  width: 100%; }
+  font-size: 1rem; }
 
 .featured-podcast img {
-  width: 100%;
-  border-radius: 100px;
+  width: 9rem;
+  border-radius: 100rem;
   border: 1px solid gray; }
 
 .featured-podcast .card {
@@ -59,20 +74,24 @@
     width: initial;
     border: none;
     border-radius: initial;
-    height: 80px; }
+    height: 3.5rem; }
+
+img.round {
+  border-radius: 100rem;
+  border: 1px solid gray; }
 
 .featured-article .title {
-  font-size: 45px; }
+  font-size: 2.5rem; }
 
 .featured-article .subtitle {
-  font-size: 15px; }
+  font-size: 1rem; }
 
 .featured-article audio {
   width: 100%; }
 
 .featured-article img {
-  width: 100px;
-  border-radius: 100px;
+  width: 6.5rem;
+  border-radius: 100rem;
   border: 1px solid gray; }
 
 .featured-article .card {
@@ -83,4 +102,9 @@
     width: initial;
     border: none;
     border-radius: initial;
-    height: 80px; }
+    height: 3.5rem; }
+
+.tight {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto; }
