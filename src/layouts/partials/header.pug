@@ -17,7 +17,7 @@ head
   link(href='//unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic', rel='stylesheet', type='text/css')
   link(href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800', rel='stylesheet', type='text/css')
-  <link href="{{ .Site.BaseURL }}css/{{ index .Site.Data.cachebust "style.css" }}" rel="stylesheet"/>
+  <link href="/css/{{ index .Site.Data.cachebust "style.css" }}" rel="stylesheet"/>
 
   script(src='//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js')
   script(src='//unpkg.com/respond.js@1.4.2/dest/respond.min.js')
@@ -25,7 +25,7 @@ head
   script(src='//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js')
   script(src='//unpkg.com/tether@latest/dist/js/tether.min.js')
   script(src='//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js')
-  <script src="{{ .Site.BaseURL }}js/{{ index .Site.Data.cachebust "main.js" }}"></script>
+  <script src="/js/{{ index .Site.Data.cachebust "main.js" }}"></script>
   
 <body>
 <div id='app'>
