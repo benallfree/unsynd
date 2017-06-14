@@ -10,29 +10,32 @@
         | more artists.
       a.btn.btn-lg.btn-primary(href="/launch")
         | Read Our Launch Plan
-
+| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "podcast") "IsPage" true) "Params.is_featured" true)}}
 .container.two.featured-podcast
   .text-center
     h1.title
-      | Pilot Episode: Jimi Revolver
+      | {{ .Title }}
     h2.subtitle.text-muted
-      | Podcast for Friday, June 9th 
+      | Podcast for {{ .Date.Format "Monday, June 2th, 2006" }}
     small.text-muted
-      | Listen time: 23 mins
+      | Listen time: {{ .Params.listen_time }} mins
   .row
     .col-md-6
       .tight
         .row
           .col.text-center
-            img(src='/img/sized/cropped/100/artists/jimi-revolver/main.jpg')
+            img(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
           .col.text-center.align-self-center
             a(style='font-size:80px').text-success
               i.fa.fa-play-circle
             h5.text-success
               | Listen Now
           p
-            | Jimi Revolver checks in from his East Coast tour to give us an exclusive performance and chat about how to get up in every morning and try again. He gives tips on vocal health, how to book gigs, as well as an exclusive performance.
+            | {{ .Params.summary }}
     .col-md-6
+      | {{ $podcast := . }}
+      | {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "artist") "IsPage" true) "Params.slug" .Params.artist)}}
+      | {{ $goody := index .Params.goodies $podcast.Params.goody }}
       .tight
         .card
           .card-block
@@ -41,15 +44,17 @@
               |  Exclusive
             .card-text
               h4.brand-orange.text-center 
-                |  Alone in Reno
-              | Download Jimi Revolver's acoustic cover, 
-              b.brand-orange Alone in Reno
+                | {{ $goody.title }}
+              | Download {{ .Title }}'s {{ $goody.style }}, 
+              b.brand-orange {{ $goody.title }}
               | , made just for the Unsynd Podcast listeners.
           .container.text-center
             .btn.btn-lg.btn-primary
-              i.fa.fa-download
-              |  Download MP3 Now
-        
+              i(class='fa {{ $goody.fa }}')
+              |  Download {{ $goody.media_type }}
+      | {{ end }}
+| {{ end }}
+| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "podcast") "IsPage" true) "Params.is_featured" true)}}
 .container.four.featured-article
   .row.text-center
     .col
@@ -87,7 +92,7 @@
             .btn.btn-lg.btn-primary
               i.fa.fa-download
               |  Download PDF Now  
-
+| {{ end }}
 .container.one.text-center
   .row
     .col
