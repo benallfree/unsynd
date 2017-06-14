@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "bootstrap-vue": "^0.16.1",
+    "firebase-tools": "^3.9.1",
     "gulp-buster": "^1.1.0",
     "gulp-hash": "^4.1.1",
     "gulp-pug": "^3.3.0",
+    "gulp-remarkable": "^1.1.2",
     "gulp-watch": "^4.3.11",
     "pug": "^2.0.0-rc.2",
     "vue-strap": "https://github.com/yuche/vue-strap.git#v2"

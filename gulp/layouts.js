@@ -19,7 +19,7 @@ var
 gulp.task('layouts-pug', () => {
   
     gulp.src(['./src/layouts/**/*.pug'])
-      .pipe(pug())
+      .pipe(pug().on("error", gutil.log))
       .pipe(gulp.dest("./hugo/layouts"))
 
 

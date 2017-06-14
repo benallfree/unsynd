@@ -1,6 +1,5 @@
 | {{ partial "header.html" .}}
 
-
 .container.three
   .row
     .col.text-center
@@ -97,5 +96,25 @@
         span.brand-orange unsynd
       h4.text-muted Those artists, musicians, and industry professionals who are not waiting for a record deal to do it for us.
       p Unsynd features daily articles and podcasts from the front lines. Learn to stoke your own fire from independent artists, agents, and professionals.
+
+.container
+  table.table
+    | {{ range .Site.Pages  }}
+    tr
+      td
+        | {{ .Permalink }}
+      td
+        | {{ .Section }}
+      td
+        | {{ .Type }}
+      td
+        | {{ .Title }}
+      td
+        | {{ .Params.title }}
+      td
+        | {{ .URL }}
+      td
+        | {{ .Ref }}
+    | {{ end }}  
 
 | {{ partial "footer.html" .}}

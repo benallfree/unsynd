@@ -1,5 +1,32 @@
 $brand-orange: #ff9827;
 
+.card
+{
+  .card-header
+  {
+    h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+    {
+      color: white;
+    }
+    
+  }
+  .card-block
+  {
+    h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
+    {
+      color: $brand-orange;
+    }
+  }
+  
+  background-color: #f9f8f8;
+  .card-header
+  {
+    background-color: $brand-orange;
+  }
+  margin-bottom: 2rem;
+}
+
+
 strong
 {
   font-weight: normal;
@@ -19,8 +46,8 @@ hr
 {
   h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
   {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   
 }
@@ -36,7 +63,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
 
 h6, .h6
 {
-  color: darken($brand-orange, 30%);
+  color: darken($brand-orange, 10%);
 }
 
 body
@@ -123,6 +150,7 @@ body
   
   .card
   {
+    background-color: #101010;
     color: white;
     h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
     {
@@ -175,6 +203,7 @@ img.round
   
   .card
   {
+    background-color: #101010;
     color: white;
     h1, h2, h3, h4, h5, h6, .h1, .h3, .h4, .h5, .h6
     {
