@@ -15,8 +15,8 @@
         | Listen to {{ .Title }}'s {{ $goody.style }}, 
         b.brand-orange {{ $goody.title }}
         | , made just for the {{ $goody.audience }}.
-        | {{ $podcast.Params.goody }}
-        v-wavesurfer(src='{{ $goody.sample_url }}', peaks='{{ jsonify (index .Site.Data.peaks $podcast.Params.goody) }}')
+        | {{ $goody_preview := print $podcast.Params.goody "-preview" }}
+        v-wavesurfer(src='{{ $goody.preview_url }}', peaks='{{ jsonify (index .Site.Data.peaks $goody_preview) }}')
         .text-center.text-success.small
           | Preview. Log in to hear and download the full version.
         | {{ else }}

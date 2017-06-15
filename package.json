@@ -7,7 +7,7 @@
     "upstream-pull": "git subtree pull --prefix themes/startbootstrap-clean-blog git@github.com:humboldtux/startbootstrap-clean-blog.git master --squash",
     "watch": "gulp watch",
     "build": "cd hugo && hugo",
-    "deploy": "firebase deploy"
+    "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
     "bootstrap-vue": "^0.16.1",
