@@ -6,7 +6,8 @@
   "scripts": {
     "upstream-pull": "git subtree pull --prefix themes/startbootstrap-clean-blog git@github.com:humboldtux/startbootstrap-clean-blog.git master --squash",
     "watch": "gulp watch",
-    "build": "cd hugo && hugo"
+    "build": "cd hugo && hugo",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "bootstrap-vue": "^0.16.1",
@@ -16,7 +17,12 @@
     "gulp-pug": "^3.3.0",
     "gulp-remarkable": "^1.1.2",
     "gulp-watch": "^4.3.11",
+    "mp3-duration": "^1.0.10",
+    "node-id3": "^0.0.9",
+    "promise": "^7.1.1",
     "pug": "^2.0.0-rc.2",
+    "through2": "^2.0.3",
+    "tmp": "^0.0.31",
     "vue-strap": "https://github.com/yuche/vue-strap.git#v2"
   },
   "devDependencies": {
@@ -45,7 +51,7 @@
     "gulp-image-resize": "^0.12.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-load-plugins": "^1.2.4",
-    "gulp-notify": "^2.2.0",
+    "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Unsynd</title>
+    <link>https://unsynd.com/post/</link>
+    <description>Recent content in Posts on Unsynd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright 2017, Unsynd.com</copyright>
+    
+	<atom:link href="https://unsynd.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://unsynd.com/post/pilot-episode-jimi-revolver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unsynd.com/post/pilot-episode-jimi-revolver/</guid>
+      <description>+++ categories = [&amp;quot;Development&amp;quot;,&amp;quot;golang&amp;quot;] comments = true date = &amp;quot;2017-06-13T15:03:05-07:00&amp;quot; description = &amp;quot;&amp;quot; draft = true image = &amp;quot;/img/about-bg.jpg&amp;quot; tags = [&amp;quot;go&amp;quot;,&amp;quot;golang&amp;quot;,&amp;quot;templates&amp;quot;,&amp;quot;themes&amp;quot;,&amp;quot;development&amp;quot;] title = &amp;quot;pilot episode jimi revolver&amp;quot;
++++</description>
+    </item>
+    
+  </channel>
+</rss>

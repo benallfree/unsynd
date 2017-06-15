@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2017, Unsynd.com</copyright>
-    <lastBuildDate>Sun, 11 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jun 2017 07:17:05 -0700</lastBuildDate>
     
 	<atom:link href="https://unsynd.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What it means to be a hard-working musician</title>
+      <link>https://unsynd.com/perspective/what-it-means-to-be-a-hard-working-musician/</link>
+      <pubDate>Wed, 14 Jun 2017 07:17:05 -0700</pubDate>
+      
+      <guid>https://unsynd.com/perspective/what-it-means-to-be-a-hard-working-musician/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jimi Revolver</title>
+      <link>https://unsynd.com/artist/jimi-revolver/</link>
+      <pubDate>Wed, 14 Jun 2017 06:59:10 -0700</pubDate>
+      
+      <guid>https://unsynd.com/artist/jimi-revolver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pilot Episode: Jimi Revolver</title>
+      <link>https://unsynd.com/podcast/pilot-episode-jimi-revolver/</link>
+      <pubDate>Tue, 13 Jun 2017 15:03:05 -0700</pubDate>
+      
+      <guid>https://unsynd.com/podcast/pilot-episode-jimi-revolver/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Crushing the Blog</title>
@@ -18,19 +45,28 @@
       <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://unsynd.com/crushing-the-blog/</guid>
-      <description>How Jimi Did It Jimi Revolver has been featured on the Unsynd Podcast and the Unsynd Blog. On the podcast, he was interviewed and gave an exclusive performance. People are listening and downloading and going nuts. But before you heard Jimi on the podcast, he wrote an article for the Unsynd Blog.
-Writing an article for the Unsynd Blog opened the door. Jimi&amp;rsquo;s article works for him day and night, building his online reputation and collecting email addresses of venues, fans, and other artists.</description>
+      <description>How Jimi crushed itJimi Revolver has been featured on the Unsynd Podcast and the Unsynd Blog. On the podcast, he was interviewed and gave an exclusive performance. People are listening and downloading and going nuts. But before you heard Jimi on the podcast, he wrote an article for the Unsynd Blog.
+Writing an article for the Unsynd Blog opened the door. Jimi&#39;s article works for him day and night, building his online reputation by linking out to his social pages and site, and also by collecting email addresses of venues, fans, and other artists.</description>
     </item>
     
     <item>
-      <title>Unsynd Podcast</title>
+      <title>Unsynd Podcast Launch Plan</title>
       <link>https://unsynd.com/launch/</link>
       <pubDate>Sun, 11 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://unsynd.com/launch/</guid>
-      <description>The Unsynd Blog is coming to your earbuds!
-Jimi Revolver kicks off our pilot episode so you know what it&amp;rsquo;s going to sound like.
- Listen Now  The Unsynd Podcast features interviews and performances by new and noteworthy artists and industry professionals who are making it happen without major record label support. I talk directly with successful people about what they are doing today to make it happen for themselves.</description>
+      <description>The Unsynd Blog is coming to your earbuds!Jimi Revolver kicks off our pilot episode so you know what it&#39;s going to sound like.
+ Listen NowWhat we talk aboutThe Unsynd Podcast features interviews and performances by new and noteworthy artists and industry professionals who are making it happen without major record label support. I talk directly with successful people about what they are doing today to make it happen for themselves.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://unsynd.com/post/pilot-episode-jimi-revolver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://unsynd.com/post/pilot-episode-jimi-revolver/</guid>
+      <description>+++ categories = [&amp;quot;Development&amp;quot;,&amp;quot;golang&amp;quot;] comments = true date = &amp;quot;2017-06-13T15:03:05-07:00&amp;quot; description = &amp;quot;&amp;quot; draft = true image = &amp;quot;/img/about-bg.jpg&amp;quot; tags = [&amp;quot;go&amp;quot;,&amp;quot;golang&amp;quot;,&amp;quot;templates&amp;quot;,&amp;quot;themes&amp;quot;,&amp;quot;development&amp;quot;] title = &amp;quot;pilot episode jimi revolver&amp;quot;
++++</description>
     </item>
     
   </channel>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Perspectives on Unsynd</title>
+    <link>https://unsynd.com/perspective/</link>
+    <description>Recent content in Perspectives on Unsynd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright 2017, Unsynd.com</copyright>
+    <lastBuildDate>Wed, 14 Jun 2017 07:17:05 -0700</lastBuildDate>
+    
+	<atom:link href="https://unsynd.com/perspective/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What it means to be a hard-working musician</title>
+      <link>https://unsynd.com/perspective/what-it-means-to-be-a-hard-working-musician/</link>
+      <pubDate>Wed, 14 Jun 2017 07:17:05 -0700</pubDate>
+      
+      <guid>https://unsynd.com/perspective/what-it-means-to-be-a-hard-working-musician/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

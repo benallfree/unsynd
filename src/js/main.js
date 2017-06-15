@@ -26,19 +26,15 @@ window.onload = function() {
               waveColor: '#69b8e0',
               progressColor: '#2f586d',
               height: 50,
+              backend: 'MediaElement',
           });
           let peaks = null;
           try
           {
             peaks = JSON.parse(this.peaks);
-            peaks = peaks.filter((v,i,a)=>{
-              return v >=0;
-            });
-            peaks = peaks.map((v,i,a)=>{
-              return v/127.0;
-            })
           } catch(SyntaxError)
           {
+            console.log("peaks error", this.peaks)
           }
           console.log(peaks);
           this.$data.player.load(this.src, peaks);

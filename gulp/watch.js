@@ -5,6 +5,7 @@ import path from 'path';
 import util from 'gulp-util';
 import runSeq from 'run-sequence';
 
+
 function logChanges(event) {
     util.log(
         util.colors.green('File ' + event.type + ': ') +

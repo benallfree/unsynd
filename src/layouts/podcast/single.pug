@@ -13,7 +13,7 @@
       .row
         .col.text-center
           img.rounded(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
-      v-wavesurfer(src='{{ .Params.media_url }}')
+      v-wavesurfer(src='{{ .Params.media_url }}', peaks='{{ jsonify (index .Site.Data.peaks .Params.slug) }}')
       .row
         .col
           h6 Connect with Jimi Revolver
