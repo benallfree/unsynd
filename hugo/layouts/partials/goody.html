@@ -1,0 +1,5 @@
+{{ $podcast := . }}
+{{ if .Params.goody }}
+{{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "artist") "IsPage" true) "Params.slug" .Params.artist)}}
+{{ $goody := index .Params.goodies $podcast.Params.goody }}<div class="goody"><div class="card"><div class="card-block"><h4 class="card-title"><img src="/img/sized/aspect/800/logo/8c_vectorized-inverted.png"/> Exclusive</h4><div class="card-text">{{ if $goody }}<h4 class="brand-orange text-center"> {{ $goody.title }}</h4>Listen to {{ .Title }}'s {{ $goody.style }}, <b class="brand-orange">{{ $goody.title }}</b>, made just for the {{ $goody.audience }}.<v-wavesurfer src="{{ $goody.sample_url }}" peaks="{{ $goody.sample_peaks }}"></v-wavesurfer><div class="text-center text-success small">Preview. Log in to hear and download the full version.</div>{{ else }}<div class="text-danger">Goody <i>{{ $podcast.Params.goody }}</i> is missing from artist profile.</div>{{ end }}</div></div></div></div>{{ end }}
+{{ end }}

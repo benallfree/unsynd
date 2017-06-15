@@ -1,0 +1,45 @@
+| {{ partial "header.html" . }}
+
+.text-center
+  h5.title
+    | {{ .Title }}
+  h6.subtitle.text-muted
+    | Podcast for {{ .Date.Format "Monday, June 2th, 2006" }}
+  small.text-muted
+    | Listen time: {{ .Params.listen_time }} mins
+.row
+  .col-md-6
+    .tight
+      .row
+        .col.text-center
+          img.rounded(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
+      v-wavesurfer(src='{{ .Params.media_url }}')
+      .row
+        .col
+          h6 Connect with Jimi Revolver
+          .social-links.text-center
+            .btn.btn-sm.btn-brand
+              i.fa.fa-facebook
+            .btn.btn-sm.btn-brand
+              i.fa.fa-youtube
+            .btn.btn-sm.btn-brand
+              i.fa.fa-twitter
+            .btn.btn-sm.btn-brand
+              i.fa.fa-bandcamp
+            .btn.btn-sm.btn-brand
+              i.fa.fa-star
+            .btn.btn-sm.btn-brand
+              i.fa.fa-soundcloud
+            .btn.btn-sm.btn-brand
+              i.fa.fa-external-link
+        p
+          | {{ .Params.summary }}
+  .col-md-6
+    | {{ partial "goody.html" . }}
+    
+.container
+  h3.brand-orange.text-center
+    | {{ .Title }}
+  | {{ partial "goody.html" . }}
+
+| {{ partial "footer.html" . }}

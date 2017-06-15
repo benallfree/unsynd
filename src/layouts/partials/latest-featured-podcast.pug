@@ -1,0 +1,23 @@
+| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "podcast") "IsPage" true) "Params.is_featured" true)}}
+.text-center
+  h1.title
+    | {{ .Title }}
+  h2.subtitle.text-muted
+    | Podcast for {{ .Date.Format "Monday, June 2th, 2006" }}
+  small.text-muted
+    | Listen time: {{ .Params.listen_time }} mins
+.row
+  .col-md-6
+    .tight
+      .row
+        .col.text-center
+          img(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
+        a.col.text-center.align-self-center(href="{{ .Permalink }}")
+          i.fa.fa-play-circle.text-success(style='font-size:80px')
+          h5.text-success
+            | Listen Now
+        p
+          | {{ .Params.summary }}
+  .col-md-6
+    | {{ partial "goody.html" . }}
+| {{ end }}

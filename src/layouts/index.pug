@@ -10,89 +10,10 @@
         | more artists.
       a.btn.btn-lg.btn-primary(href="/launch")
         | Read Our Launch Plan
-| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "podcast") "IsPage" true) "Params.is_featured" true)}}
 .container.two.featured-podcast
-  .text-center
-    h1.title
-      | {{ .Title }}
-    h2.subtitle.text-muted
-      | Podcast for {{ .Date.Format "Monday, June 2th, 2006" }}
-    small.text-muted
-      | Listen time: {{ .Params.listen_time }} mins
-  .row
-    .col-md-6
-      .tight
-        .row
-          .col.text-center
-            img(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
-          .col.text-center.align-self-center
-            a(style='font-size:80px').text-success
-              i.fa.fa-play-circle
-            h5.text-success
-              | Listen Now
-          p
-            | {{ .Params.summary }}
-    .col-md-6
-      | {{ $podcast := . }}
-      | {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "artist") "IsPage" true) "Params.slug" .Params.artist)}}
-      | {{ $goody := index .Params.goodies $podcast.Params.goody }}
-      .tight
-        .card
-          .card-block
-            h4.card-title
-              img(src='/img/sized/aspect/800/logo/8c_vectorized-inverted.png')
-              |  Exclusive
-            .card-text
-              h4.brand-orange.text-center 
-                | {{ $goody.title }}
-              | Download {{ .Title }}'s {{ $goody.style }}, 
-              b.brand-orange {{ $goody.title }}
-              | , made just for the Unsynd Podcast listeners.
-          .container.text-center
-            .btn.btn-lg.btn-primary
-              i(class='fa {{ $goody.fa }}')
-              |  Download {{ $goody.media_type }}
-      | {{ end }}
-| {{ end }}
-| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "podcast") "IsPage" true) "Params.is_featured" true)}}
+  | {{ partial "latest-featured-podcast.html" . }}
 .container.four.featured-article
-  .row.text-center
-    .col
-      h1.title
-        | Surviving the Road
-      h2.subtitle.text-muted
-        | Artist Perspective for Friday, June 9th 
-      small.text-muted
-        | Read time: 23 mins
-  .row
-    .col-md-6
-      .tight
-        .media
-          .media-body
-            | It's not every day that you can get up and look out at the ocean and think, "I arrived". Today wasn't one of those days either.
-          img.d-flex.ml-1(src='/img/sized/cropped/100/artists/jimi-revolver/main.jpg')
-        p.text-center
-          a.btn.btn-lg.btn-success
-            i.fa.fa-book
-            |  Read Article
-    .col-md-6
-      .tight
-        .card
-          .card-block
-            h4.card-title
-              img(src='/img/sized/aspect/800/logo/8c_vectorized-inverted.png')
-              |  Exclusive
-            .card-text
-              h4.brand-orange.text-center
-                | The Humble Warrior
-              | Download Jimi Revolver's mental wellness checklist, 
-              b.brand-orange The Humble Warrior
-              | , made just for Unsynd Blog readers.
-          .container.text-center
-            .btn.btn-lg.btn-primary
-              i.fa.fa-download
-              |  Download PDF Now  
-| {{ end }}
+  | {{ partial "latest-featured-article.html" . }}
 .container.one.text-center
   .row
     .col
@@ -102,24 +23,6 @@
       h4.text-muted Those artists, musicians, and industry professionals who are not waiting for a record deal to do it for us.
       p Unsynd features daily articles and podcasts from the front lines. Learn to stoke your own fire from independent artists, agents, and professionals.
 
-.container
-  table.table
-    | {{ range .Site.Pages  }}
-    tr
-      td
-        | {{ .Permalink }}
-      td
-        | {{ .Section }}
-      td
-        | {{ .Type }}
-      td
-        | {{ .Title }}
-      td
-        | {{ .Params.title }}
-      td
-        | {{ .URL }}
-      td
-        | {{ .Ref }}
-    | {{ end }}  
+| {{ partial "debug.html" . }}
 
 | {{ partial "footer.html" .}}

@@ -1,0 +1,29 @@
+| {{ $podcast := . }}
+| {{ if .Params.goody }}
+| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "artist") "IsPage" true) "Params.slug" .Params.artist)}}
+| {{ $goody := index .Params.goodies $podcast.Params.goody }}
+.goody
+  .card
+    .card-block
+      h4.card-title
+        img(src='/img/sized/aspect/800/logo/8c_vectorized-inverted.png')
+        |  Exclusive
+      .card-text
+        | {{ if $goody }}
+        h4.brand-orange.text-center 
+          | {{ $goody.title }}
+        | Listen to {{ .Title }}'s {{ $goody.style }}, 
+        b.brand-orange {{ $goody.title }}
+        | , made just for the {{ $goody.audience }}.
+        v-wavesurfer(src='{{ $goody.sample_url }}', peaks='{{ $goody.sample_peaks }}')
+        .text-center.text-success.small
+          | Preview. Log in to hear and download the full version.
+        | {{ else }}
+        .text-danger
+          | Goody 
+          i
+            | {{ $podcast.Params.goody }}
+          |  is missing from artist profile.
+        | {{ end }}
+| {{ end }}
+| {{ end }}

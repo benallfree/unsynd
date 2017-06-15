@@ -1,0 +1,23 @@
+| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "perspective") "IsPage" true) "Params.is_featured" true)}}
+.row.text-center
+  .col
+    h1.title
+      | {{ .Title }}
+    h2.subtitle.text-muted
+      | Artist Perspective for {{ .Date.Format "Monday, June 2th, 2006" }}
+    small.text-muted
+      | Read time: 23 mins
+.row
+  .col-md-6
+    .tight
+      .media
+        .media-body
+          | {{ .Params.summary }}
+        img.d-flex.ml-1(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
+      p.text-center
+        a.btn.btn-lg.btn-success
+          i.fa.fa-book
+          |  Read Article
+  .col-md-6
+    | {{ partial "goody.html" . }}
+| {{ end }}

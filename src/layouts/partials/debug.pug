@@ -1,0 +1,19 @@
+.container
+  table.table
+    | {{ range .Site.Pages  }}
+    tr
+      td
+        | {{ .Permalink }}
+      td
+        | {{ .Section }}
+      td
+        | {{ .Type }}
+      td
+        | {{ .Title }}
+      td
+        | {{ .Params.title }}
+      td
+        | {{ .URL }}
+      td
+        | {{ .Ref }}
+    | {{ end }}  
