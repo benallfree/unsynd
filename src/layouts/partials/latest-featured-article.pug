@@ -15,7 +15,7 @@
           | {{ .Params.summary }}
         img.d-flex.ml-1(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
       p.text-center
-        a.btn.btn-lg.btn-success
+        a.btn.btn-lg.btn-success(href='{{ .Permalink }}')
           i.fa.fa-book
           |  Read Article
   .col-md-6

@@ -6,8 +6,10 @@
       h3
         | The Unsynd Podcast launches in 
         s 50
-        span.text-warning  49 
-        | more artists.
+        |  
+        span.text-warning
+          | {{ sub 50 (len (where (where .Site.Pages "IsPage" true) "Type" "artist" ))}}
+        |  more artists.
       a.btn.btn-lg.btn-primary(href="/launch")
         | Read Our Launch Plan
 .container.two.featured-podcast

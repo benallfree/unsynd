@@ -23,7 +23,7 @@ gulp.task('layouts-pug', () => {
   
     gulp.src(['./src/layouts/**/*.pug'])
       .pipe(changed("./hugo/layouts", {extension: '.html'}))
-      .pipe(pug().on("error", (msg)=>{ notify(msg) }))
+      .pipe(pug().on("error", (msg)=>{ gutil.log(msg); notify(msg); }))
       .pipe(gulp.dest("./hugo/layouts"))
 
 

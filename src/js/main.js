@@ -20,7 +20,6 @@ window.onload = function() {
           },
         },
         mounted() {
-          console.log(this.$refs.player);
           this.$data.player = WaveSurfer.create({
               container: this.$refs.player,
               waveColor: '#69b8e0',
@@ -36,7 +35,6 @@ window.onload = function() {
           {
             console.log("peaks error", this.peaks)
           }
-          console.log(peaks);
           this.$data.player.load(this.src, peaks);
           this.$data.player.on('pause', ()=>{
             this.$data.is_playing = false;
