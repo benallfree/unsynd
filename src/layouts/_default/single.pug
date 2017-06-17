@@ -1,9 +1,9 @@
 | {{ partial "header.html" . }}
 
-.container
-  h3.brand-orange.text-center
-    | {{ .Title }}
-  .content
+.card
+  .card-header
+      h1 {{ .Title }}
+  .card-block
     | {{ .Content }}
 
 | {{ partial "footer.html" . }}

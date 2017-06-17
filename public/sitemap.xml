@@ -23,17 +23,18 @@
   </url>
   
   <url>
+    <loc>https://unsynd.com/page/crushing-the-blog/</loc>
+    <lastmod>2017-06-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://unsynd.com/launch/</loc>
     <lastmod>2017-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://unsynd.com/</loc>
-    <lastmod>2017-06-14T07:17:05-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://unsynd.com/post/pilot-episode-jimi-revolver/</loc>
+    <loc>https://unsynd.com/page/launch/</loc>
+    <lastmod>2017-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -44,6 +45,12 @@
   
   <url>
     <loc>https://unsynd.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://unsynd.com/page/</loc>
+    <lastmod>2017-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -60,13 +67,26 @@
   </url>
   
   <url>
-    <loc>https://unsynd.com/post/</loc>
+    <loc>https://unsynd.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://unsynd.com/tags/</loc>
+    <loc>https://unsynd.com/</loc>
+    <lastmod>2017-06-14T07:17:05-07:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://unsynd.com/page/dmca/</loc>
+  </url>
+  
+  <url>
+    <loc>https://unsynd.com/page/privacy/</loc>
+  </url>
+  
+  <url>
+    <loc>https://unsynd.com/page/tos/</loc>
   </url>
   
 </urlset>

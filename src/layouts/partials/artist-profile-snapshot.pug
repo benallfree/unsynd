@@ -1,0 +1,10 @@
+| {{ $perspective := . }}
+| {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "artist") "IsPage" true) "Params.slug" .Params.artist)}}
+.container
+  h6 Connect with {{ .Title }} 
+  .social-links.text-center
+    | {{ range $site := .Params.social }}
+    a.btn.btn-sm.btn-brand(href='{{ $site.url }}')
+      i.fa(class='fa-{{ $site.fa }}')
+    | {{ end }}
+| {{ end }}

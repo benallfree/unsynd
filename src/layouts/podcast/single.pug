@@ -17,22 +17,7 @@
         | {{ .Params.summary }}
   .col-md-6
     | {{ partial "goody.html" . }}
-.container
-  h6 Connect with asdfJimi Revolver
-  .social-links.text-center
-    .btn.btn-sm.btn-brand
-      i.fa.fa-facebook
-    .btn.btn-sm.btn-brand
-      i.fa.fa-youtube
-    .btn.btn-sm.btn-brand
-      i.fa.fa-twitter
-    .btn.btn-sm.btn-brand
-      i.fa.fa-bandcamp
-    .btn.btn-sm.btn-brand
-      i.fa.fa-star
-    .btn.btn-sm.btn-brand
-      i.fa.fa-soundcloud
-    .btn.btn-sm.btn-brand
-      i.fa.fa-external-link
+
+| {{ partial "artist-profile-snapshot" . }}
 
 | {{ partial "footer.html" . }}

@@ -1,11 +1,11 @@
 'use strict';
 
 import gulp from 'gulp';
-import peaks from '../gulp-peak-builder'
+import peakbuilder from 'gulp-wavesurfer-peakbuilder'
 
 gulp.task('peaks', () => {
   gulp.src(['../cloud/**/*.mp3'])
-    .pipe(peaks())
+    .pipe(peakbuilder())
     .pipe(gulp.dest("./hugo/data/peaks"))
         
 });

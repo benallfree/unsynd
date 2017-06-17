@@ -19,13 +19,6 @@
         | , made available just for this {{ $goody.audience }}.
         | {{ $goody_preview := print $podcast.Params.goody "-preview" }}
         v-wavesurfer(src='{{ $goody.preview_url }}', peaks='{{ jsonify (index .Site.Data.peaks $goody_preview) }}')
-        .text-center
-          a.btn.btn-primary.btn-lg
-            i.fa.fa-lock
-            |  Access the Full Version
-        .text-danger
-          small
-            | Sign in to hear and download the full version.
         | {{ else }}
         .text-danger
           | Goody 

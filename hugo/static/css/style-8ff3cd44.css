@@ -1,6 +1,8 @@
-.card {
-  background-color: #f9f8f8;
+.card-container {
   margin-bottom: 2rem; }
+
+.card {
+  background-color: #f9f8f8; }
   .card .card-header h1, .card .card-header h2, .card .card-header h3, .card .card-header h4, .card .card-header h5, .card .card-header h6, .card .card-header .h1, .card .card-header .h3, .card .card-header .h4, .card .card-header .h5, .card .card-header .h6 {
     color: white; }
   .card .card-block h1, .card .card-block h2, .card .card-block h3, .card .card-block h4, .card .card-block h5, .card .card-block h6, .card .card-block .h1, .card .card-block .h3, .card .card-block .h4, .card .card-block .h5, .card .card-block .h6 {
@@ -99,28 +101,17 @@ img.round {
   margin-left: auto;
   margin-right: auto; }
 
-.wavesurfer .wavesurfer-controls {
-  float: left;
-  width: 3rem;
-  font-size: 3rem;
-  color: green;
-  line-height: 3rem; }
-  .wavesurfer .wavesurfer-controls .fa-pause-circle {
-    color: #69b8e0; }
-
-.wavesurfer .wavesurfer-player {
-  overflow: hidden; }
-
 .goody .card {
   background-color: #101010;
   color: white; }
   .goody .card h1, .goody .card h2, .goody .card h3, .goody .card h4, .goody .card h5, .goody .card h6, .goody .card .h1, .goody .card .h3, .goody .card .h4, .goody .card .h5, .goody .card .h6 {
-    color: white; }
+    color: white;
+    margin-top: 0.8rem; }
   .goody .card .card-title img {
     width: initial;
     border: none;
     border-radius: initial;
-    height: 3.5rem; }
+    height: 2.5rem; }
 
 img.rounded {
   border-radius: 100rem;

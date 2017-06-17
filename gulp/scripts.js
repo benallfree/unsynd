@@ -1,26 +1,28 @@
 'use strict';
 
-import gulp from 'gulp';
-import concat from 'gulp-concat';
-import rename from 'gulp-rename';
-import uglify from 'gulp-uglify';
-import browserify from 'browserify';
-import babelify from 'babelify';
-import source from 'vinyl-source-stream';
-import buffer from 'vinyl-buffer';
-import sourcemaps from 'gulp-sourcemaps';
-import gutil from 'gulp-util';
-
-var 
-  hash         = require("gulp-hash"),
-  del          = require("del")
+import gulp from 'gulp'
+import concat from 'gulp-concat'
+import rename from 'gulp-rename'
+import browserify from 'browserify'
+import babelify from 'babelify'
+import source from 'vinyl-source-stream'
+import buffer from 'vinyl-buffer'
+import sourcemaps from 'gulp-sourcemaps'
+import gutil from 'gulp-util'
+import babel  from 'gulp-babel'
+import hash from 'gulp-hash'
+import del from 'del'
 
 const b = browserify({
     entries: `${global.paths.src}/js/main.js`,
     debug: true,
-    transform: [babelify.configure({
+    transform: [
+      'browserify-shim',
+      babelify.configure({
         presets: ['es2015']
-    })]
+      }),
+      'vueify',
+    ],
 });
 
 // babelify JavaScript files

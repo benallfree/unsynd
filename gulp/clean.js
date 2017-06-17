@@ -5,5 +5,4 @@ import del from 'del';
 
 // clean the build dir
 gulp.task('clean', () => {
-    del([`${global.paths.dist}/*`]);
 });
