@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "upstream-pull": "git subtree pull --prefix themes/startbootstrap-clean-blog git@github.com:humboldtux/startbootstrap-clean-blog.git master --squash",
     "watch": "NODE_ENV=production gulp watch",
     "build": "NODE_ENV=production gulp build && cd hugo && hugo",
     "deploy": "yarn build && firebase deploy"
