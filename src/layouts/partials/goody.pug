@@ -18,7 +18,7 @@
         b.brand-orange {{ $goody.title }}
         | , made available just for this {{ $goody.audience }}.
         | {{ $goody_preview := print $podcast.Params.goody "-preview" }}
-        v-wavesurfer(src='{{ $goody.preview_url }}', peaks='{{ jsonify (index .Site.Data.peaks $goody_preview) }}')
+        v-wavesurfer(src='{{ $goody.preview_url }}', peaks='{{ jsonify (index .Site.Data.peaks $goody_preview) }}', title='{{ $goody.title }}')
         | {{ else }}
         .text-danger
           | Goody 

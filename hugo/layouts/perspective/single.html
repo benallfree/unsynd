@@ -1,3 +1,4 @@
-{{ partial "header.html" . }}<div class="text-center"><h5 class="title">{{ .Title }}</h5><h6 class="subtitle text-muted">Artist Perspective for {{ .Date.Format "Monday, June 2th, 2006" }}</h6><small class="text-muted">Read time: 13 mins</small></div><div class="tight"><div class="text-center"><img class="rounded" src="/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg"/></div></div><div class="container">{{ partial "goody.html" . }}
-{{ .Content }}</div>{{ partial "artist-profile-snapshot" . }}
+{{ partial "header.html" . }}<div class="container"><div class="text-center"><h5 class="title">{{ .Title }}</h5><div class="tight"><div class="text-center"><img class="rounded" src="/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg"/></div><div class="text-center">{{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "artist") "IsPage" true) "Params.slug" .Params.artist)}}
+by {{ .Title }}
+{{ end }}</div></div><h6 class="subtitle text-muted">Artist Perspective for {{ .Date.Format "Monday, June 2th, 2006" }}</h6><small class="text-muted">Read time: 13 mins</small></div></div><div class="container">{{ partial "goody.html" . }}</div><div class="container">{{ .Content }}</div>{{ partial "artist-profile-snapshot" . }}
 {{ partial "footer.html" . }}

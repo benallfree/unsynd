@@ -1,5 +1,51 @@
 $brand-orange: #ff9827;
 
+.heading
+{
+  background-color: $brand-orange;
+  h1, h2, h3, h4, h5, h6
+  {
+    color: #fff;
+  }
+  h1
+  {
+    font-size: 2rem;
+  }
+  h2
+  {
+    font-size: 1rem;
+    color: #5d4c4c;
+  }
+  h3
+  {
+    font-size: .8rem;
+    color: #5d4c4c;
+  }
+  h4
+  {
+    font-size: 1rem;
+    color: red;
+  }
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.body
+{
+  background-color: white;
+  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  h1, h2, h3, h4, h5, h6
+  {
+    color: $brand-orange;
+  }
+  
+}
+
+
+
 .card-container
 {
   margin-bottom: 2rem;
@@ -191,7 +237,7 @@ img.round
 
 .tight
 {
-  width: 320px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -247,4 +293,13 @@ img.rounded
 {
   background-color: $brand-orange;
   color: white;
+}
+
+
+.wavesurfer-console
+{
+  .title
+  {
+    color: $brand-orange;
+  }
 }

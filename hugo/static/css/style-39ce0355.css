@@ -1,3 +1,31 @@
+.heading {
+  background-color: #ff9827;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .heading h1, .heading h2, .heading h3, .heading h4, .heading h5, .heading h6 {
+    color: #fff; }
+  .heading h1 {
+    font-size: 2rem; }
+  .heading h2 {
+    font-size: 1rem;
+    color: #5d4c4c; }
+  .heading h3 {
+    font-size: .8rem;
+    color: #5d4c4c; }
+  .heading h4 {
+    font-size: 1rem;
+    color: red; }
+
+.body {
+  background-color: white;
+  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem; }
+  .body h1, .body h2, .body h3, .body h4, .body h5, .body h6 {
+    color: #ff9827; }
+
 .card-container {
   margin-bottom: 2rem; }
 
@@ -97,7 +125,7 @@ img.round {
   border: 1px solid gray; }
 
 .tight, .goody {
-  width: 320px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -127,3 +155,6 @@ img.rounded {
 .btn-brand {
   background-color: #ff9827;
   color: white; }
+
+.wavesurfer-console .title {
+  color: #ff9827; }

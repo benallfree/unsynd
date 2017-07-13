@@ -1,17 +1,24 @@
 | {{ partial "header.html" . }}
 
-.text-center
-  h5.title
-    | {{ .Title }}
-  h6.subtitle.text-muted
-    | Artist Perspective for {{ .Date.Format "Monday, June 2th, 2006" }}
-  small.text-muted
-    | Read time: 13 mins
-.tight
+
+.container
   .text-center
-    img.rounded(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
+    h5.title
+      | {{ .Title }}
+    .tight
+      .text-center
+        img.rounded(src='/img/sized/cropped/100/artists/{{ .Params.artist }}/main.jpg')
+      .text-center
+        | {{ range first 1 (where (where (where .Site.Pages.ByDate.Reverse "Type" "artist") "IsPage" true) "Params.slug" .Params.artist)}}
+        | by {{ .Title }}
+        | {{ end }}
+    h6.subtitle.text-muted
+      | Artist Perspective for {{ .Date.Format "Monday, June 2th, 2006" }}
+    small.text-muted
+      | Read time: 13 mins
 .container
   | {{ partial "goody.html" . }}
+.container
   | {{ .Content }}
 
 | {{ partial "artist-profile-snapshot" . }}

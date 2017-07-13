@@ -9,3 +9,5 @@ disqusShortname = "YourDisqusShortname" #delete or comment to disable Disqus com
 publishDir = "../public"
 canonifyURLs=false
 
+[params]
+idx=1

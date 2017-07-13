@@ -21,14 +21,25 @@ head
 
   script(src='//unpkg.com/html5shiv@3.7.3/dist/html5shiv.min.js')
   script(src='//unpkg.com/respond.js@1.4.2/dest/respond.min.js')
-  script(src='//unpkg.com/vue@2.3.4/dist/vue.min.js')
-  script(src='//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js')
-  script(src='//unpkg.com/tether@latest/dist/js/tether.min.js')
-  script(src='//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js')
-  script(src='//unpkg.com/wavesurfer.js@1.4.0/dist/wavesurfer.min.js')
-  <script src="/js/{{ index .Site.Data.cachebust "main.js" }}"></script>
   
 <body>
+script.
+  window.fbAsyncInit = function() {
+  FB.init({
+  appId      : '440121603021501',
+  cookie     : true,
+  xfbml      : true,
+  version    : 'v2.8'
+  });
+  FB.AppEvents.logPageView();
+  };
+  (function(d, s, id){
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 <div id='app'>
 .container
   .row.text-center
