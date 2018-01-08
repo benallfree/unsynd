@@ -95,102 +95,101 @@
 export default {
   props: {
     src: {
-      type: String,
+      type: String
     },
     peaks: {
-      type: Array,
+      type: Array
     },
     title: {
-      type: String,
+      type: String
     },
     waveColor: {
       type: String,
-      default: '#69b8e0',
+      default: '#69b8e0'
     },
     progressColor: {
       type: String,
-      default: '#2f586d',
+      default: '#2f586d'
     },
     height: {
       type: Number,
-      default: 50,
-    },
+      default: 50
+    }
   },
   data() {
     return {
-      'player': null,
-      'is_playing': false,
+      player: null,
+      is_playing: false,
       currentTime: 0,
-      duration: 0,
+      duration: 0
     }
   },
   methods: {
     play() {
       window.eventBus.$emit('before-play', this.title, this._uid)
-      this.$data.player.play();
+      this.$data.player.play()
       window.eventBus.$emit('playing', this.title, this._uid)
     },
     pause() {
-      this.$data.player.pause();
+      this.$data.player.pause()
       window.eventBus.$emit('paused', this.title, this._uid)
-    },
+    }
   },
   mounted() {
     this.$data.player = WaveSurfer.create({
-        container: this.$refs.player,
-        waveColor: this.waveColor,
-        progressColor: this.progressColor,
-        height: this.height,
-        backend: 'MediaElement',
-    });
-    let peaks = null;
-    try
-    {
-      peaks = JSON.parse(this.peaks);
-    } catch(SyntaxError)
-    {
-      console.log("peaks error", this.peaks)
+      container: this.$refs.player,
+      waveColor: this.waveColor,
+      progressColor: this.progressColor,
+      height: this.height,
+      backend: 'MediaElement'
+    })
+    let peaks = null
+    try {
+      peaks = JSON.parse(this.peaks)
+    } catch (SyntaxError) {
+      console.log('peaks error', this.peaks)
     }
-    this.$data.player.load(this.src, peaks);
-    
-    let t = null;
-    let updateTime = ()=>
-    {
-      let d = this.$data.player.getDuration();
+    this.$data.player.load(this.src, peaks)
+
+    let t = null
+    let updateTime = () => {
+      let d = this.$data.player.getDuration()
       let f = d > 3600 ? 'hh:mm:ss' : 'mm:ss'
-      this.$data.currentTime = moment.duration(this.$data.player.getCurrentTime(), "seconds").format(f, {trim: false});
-      this.$data.duration = moment.duration(this.$data.player.getDuration(), "seconds").format(f, {trim: false});
+      this.$data.currentTime = moment
+        .duration(this.$data.player.getCurrentTime(), 'seconds')
+        .format(f, { trim: false })
+      this.$data.duration = moment
+        .duration(this.$data.player.getDuration(), 'seconds')
+        .format(f, { trim: false })
     }
-    this.$data.player.on('pause', ()=>{
-      this.$data.is_playing = false;
-      updateTime();
-      clearTimeout(t);
+    this.$data.player.on('pause', () => {
+      this.$data.is_playing = false
+      updateTime()
+      clearTimeout(t)
     })
-    this.$data.player.on('play', ()=>{
-      this.$data.is_playing = true;
-      updateTime();
-      t = setInterval(updateTime, 1000);
+    this.$data.player.on('play', () => {
+      this.$data.is_playing = true
+      updateTime()
+      t = setInterval(updateTime, 1000)
     })
-    this.$data.player.on('finish', ()=>{
-      console.log('finished');
-      this.$data.is_playing = false;
-      this.$data.player.seekTo(0);
-      clearTimeout(t);
+    this.$data.player.on('finish', () => {
+      console.log('finished')
+      this.$data.is_playing = false
+      this.$data.player.seekTo(0)
+      clearTimeout(t)
       window.eventBus.$emit('stopped', this.title)
     })
-    this.$data.player.on('ready', ()=>{
-      updateTime();
-    });
-    this.$data.player.on('seek', ()=>{
-      updateTime();
-    });
-    window.eventBus.$on('before-play', (title,uid)=>{
-      if(uid!=this._uid)
-      {
+    this.$data.player.on('ready', () => {
+      updateTime()
+    })
+    this.$data.player.on('seek', () => {
+      updateTime()
+    })
+    window.eventBus.$on('before-play', (title, uid) => {
+      if (uid != this._uid) {
         this.pause()
       }
     })
-    
-  },
+  }
 }
 </script>

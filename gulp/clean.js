@@ -1,8 +1,7 @@
-'use strict';
+'use strict'
 
-import gulp from 'gulp';
-import del from 'del';
+import gulp from 'gulp'
+import del from 'del'
 
 // clean the build dir
-gulp.task('clean', () => {
-});
+gulp.task('clean', () => {})

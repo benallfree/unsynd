@@ -6,8 +6,13 @@
   "scripts": {
     "watch": "NODE_ENV=production gulp watch",
     "build": "NODE_ENV=production gulp build && cd hugo && hugo",
-    "deploy": "yarn build && firebase deploy"
+    "deploy": "yarn build && firebase deploy",
+    "prettier": "prettier -l './**/*.{js,json}'",
+    "prettier:fix": "prettier --write --loglevel=error './**/*.{js,json}' ",
+    "prettier:fix:package": "prettier --write --loglevel=error package*.json ",
+    "postinstall": "npm run prettier:fix:package"
   },
+  "pre-commit": ["prettier"],
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -45,7 +50,9 @@
     "run-sequence": "^1.2.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
-    "vueify": "^9.4.1"
+    "vueify": "^9.4.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.9.2"
   },
   "repository": {
     "type": "git",
