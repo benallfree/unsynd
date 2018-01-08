@@ -26,7 +26,6 @@ gulp.task('minimize-images', function() {
     )
     .pipe(gulp.dest(dest))
 })
-
 ;[100, 300, 800, 1000, 2000].forEach(function(size) {
   var resizeImageTask = 'crop_' + size
   gulp.task(resizeImageTask, ['minimize-images'], function() {
